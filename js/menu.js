@@ -1,19 +1,18 @@
-const menu = document.querySelector(".menu");
-const menuItems = document.querySelectorAll(".menuItem");
-const hamburger= document.querySelector(".header-inform__menu");
-const closeIcon= document.querySelector(".header-inform__menu");
-const menuIcon = document.querySelector(".header-inform__menu");
+const closeIcon= document.querySelector(".mobile-menu__close");
+const menu = document.querySelector(".mobile-menu");
+const burger = document.getElementById("burger");
+const burger2 = document.getElementById("burger2");
+
+
 
 function toggleMenu() {
-  if (menu.classList.contains("showMenu")) {
-    menu.classList.remove("showMenu");
-    closeIcon.style.display = "none";
-    menuIcon.style.display = "block";
-  } else {
-    menu.classList.add("showMenu");
-    closeIcon.style.display = "block";
-    menuIcon.style.display = "none";
-  }
+    menu.style.visibility = "visible"
+}
+function closeBtn() {
+    menu.style.visibility = "hidden"
+
 }
 
-hamburger.addEventListener("click", toggleMenu);
+burger.addEventListener("click", toggleMenu);
+closeIcon.addEventListener("click", closeBtn)
+burger2.addEventListener("click", toggleMenu);

@@ -84,6 +84,7 @@ body {
   color: rgb(0, 0, 0);
 }
 .wrapper {
+  position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -126,9 +127,9 @@ body {
   flex-direction: column;
 }
 
-
-
-
+.body {
+  position: relative;
+}
 .header-inform {
   background: #141414;
   box-shadow: 0px 4px 20px rgba(169, 169, 169, 0.18);
@@ -136,7 +137,7 @@ body {
 .header-inform__container {
   padding: 25px 0px 25px 6px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .header-inform-nemu-wrapper {
   display: none;
@@ -170,6 +171,7 @@ body {
   margin-right: 15px;
 }
 .header-inform__title {
+  margin-right: 20px;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
@@ -271,23 +273,44 @@ body {
 }
 
 /* ==================== */
+.active {
+  visibility: visible;
+}
+.mobile-menu {
+  visibility: hidden;
+  padding: 10px 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  width: 100%;
+  background: black;
+  z-index: 10;
+
+}
+.mobile-menu-items {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile-menu-item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 46px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+.mobile-menu__close {
+ 
+
+}
+
 .main {
   flex: 1 0;
 }
-
-
-
-.burger-menu {
-  width: 100%;
-  background-color: #0000;
-}
-
-.showMenu {
-  transform: translateY(0);
-}
-
-
-
 .main-wrapper {
   background: #141414;
   height: 70px;
@@ -499,10 +522,6 @@ body {
 }
 /* ================== */
 
-.hits {
-}
-.hits__container {
-}
 .hits-title {
   margin-bottom: 60px;
   display: flex;
@@ -558,8 +577,7 @@ body {
   line-height: 34px;
   color: #141414;
 }
-.hits-cart-item__description {
-}
+
 .hits-cart-item__desc {
   display: flex;
   align-items: center;
@@ -591,8 +609,7 @@ body {
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.hits-cart-item__star {
-}
+
 .hits-cart-item__count {
   font-style: normal;
   font-weight: 500;
@@ -1013,13 +1030,10 @@ input[type='checkbox']:checked:after {
   }
   .header-inform-searchbar__logo {
     margin-right: 70px;
-
   }
   .header-inform-searchbar__search {
     margin-right: 70px;
     width: 298px;
-
-
   }
   .header-inform-contact__town {
     display: none;
@@ -1109,6 +1123,7 @@ input[type='checkbox']:checked:after {
     display: none;
   }
   .header-inform__menu {
+    position: relative;
     display: block;
   }
   .header-inform-searchbar__logo {
@@ -1233,18 +1248,16 @@ input[type='checkbox']:checked:after {
   }
   .hits-title__title {
     font-size: 22px;
-
   }
   .flashlight-block-items {
     width: 374px;
   }
-  .flashlight-block-item__img img{
+  .flashlight-block-item__img img {
     width: 372px;
     height: 300px;
   }
   .hits-cart-item__btn {
     font-size: 14px;
-
   }
   .articles-item {
     margin-right: 0;
