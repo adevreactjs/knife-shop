@@ -1257,6 +1257,7 @@ input[type='checkbox']:checked:after {
     height: 300px;
   }
   .hits-cart-item__btn {
+    padding: 2px 90px;
     font-size: 14px;
   }
   .articles-item {
